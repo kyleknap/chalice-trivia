@@ -1,0 +1,31 @@
+# Chalice specific
+.chalice/deployments/
+.chalice/venv/
+
+*.py[co]
+*.DS_Store
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+var
+sdist
+develop-eggs
+.installed.cfg
+
+*.sw[po]
+
+# Eclipse IDE
+/.project
+/.pydevproject
+
+# IDEA IDE
+.idea*
+src/
+
+# Pyenv
+.python-version

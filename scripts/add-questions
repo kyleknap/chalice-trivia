@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+import json
+
+import boto3
+
+
+dynamodb = boto3.resource('dynamodb', 'us-west-2')
+table = dynamodb.Table('trivia')
+
+
+def add_questions():
+    with open('questions.json') as f:
+        question_data = json.loads(f.read())
+
+    for i, question_data in enumerate(question_data['questions']):
+        add_question(str(i+1), question_data)
+
+
+def add_question(question_id, question_data):
+    table.put_item(
+       Item={
+            'question_id': question_id,
+            'question': question_data['question'],
+            'possible_answers': question_data['possible_answers'],
+            'correct_answer': question_data['correct_answer'],
+        }
+    )
+
+
+if __name__ == '__main__':
+    add_questions()

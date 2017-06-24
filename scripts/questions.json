@@ -1,0 +1,55 @@
+{
+    "questions": [
+       {
+            "question": "Where is EuroPython currently being held for 2017?",
+            "possible_answers": [
+                "Rimini, Italy",
+                "Bilbao, Spain",
+                "Florence, Italy",
+                "Berlin, Germany"
+            ],
+            "correct_answer": "Rimini, Italy"
+        },
+        {
+            "question": "According to PEP8, how many spaces should be used per indentation level?",
+            "possible_answers": [
+                "One",
+                "Two",
+                "Four",
+                "None. Use tabs"
+            ],
+            "correct_answer": "Four"
+        },
+        {
+            "question": "Which one of these is not part of the Zen of Python?",
+            "possible_answers": [
+                "Flat is better than nested",
+                "Complex is better than complicated",
+                "Implicit is better than explicit",
+                "Now is better than never"
+            ],
+            "correct_answer": "Implicit is better than explicit"
+        },
+        {
+            "question": "Which module was added to the Python Standard Library in version 3.6?",
+            "possible_answers": [
+                "secrets",
+                "typing",
+                "asyncio",
+                "pathlib"
+            ],
+            "correct_answer": "secrets"
+        },
+        {
+            "question": "What year was Python 3.0 released?",
+            "possible_answers": [
+                "2006",
+                "2007",
+                "2008",
+                "2009"
+            ],
+            "correct_answer": "2008"
+        }
+    ]
+}
+

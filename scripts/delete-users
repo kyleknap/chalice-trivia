@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import boto3
+
+POOL_ID = 'us-west-2_Q55mBivo4'
+USER_TABLE = 'trivia-users'
+
+cognito_idp = boto3.client('cognito-idp', 'us-west-2')
+dynamodb = boto3.resource('dynamodb', 'us-west-2')
+
+
+def delete_users():
+    response = cognito_idp.list_users(UserPoolId=POOL_ID)
+    for user in response['Users']:
+        delete_user(user['Username'])
+
+
+def delete_user(username):
+    print('Deleting ' + username) 
+    cognito_idp.admin_delete_user(
+        UserPoolId=POOL_ID,
+        Username=username
+    )
+    dynamodb.Table(USER_TABLE).delete_item(Key={'username': username})
+
+
+if __name__ == '__main__':
+    delete_users()
