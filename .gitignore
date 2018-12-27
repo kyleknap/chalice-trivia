@@ -25,7 +25,6 @@ develop-eggs
 
 # IDEA IDE
 .idea*
-src/
 
 # Pyenv
 .python-version
